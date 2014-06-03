@@ -1,0 +1,5 @@
+{
+	"ImportPath": "outlanderapp",
+	"GoVersion": "go1.2.2",
+	"Deps": []
+}
