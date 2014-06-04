@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>Outlander - A Mac OSX client for DragonRealms.</title>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+	</head>
+	<body>
+
+	<div class="container">
+		<div class="row-fluid">
+			<h1>Outlander</h1>
+			<p>A Mac OSX client for DragonRealms.</p>
+		</div>
+
+		<div class="row-fluid">
+			<p>The latest version is {{.Version.Version}}.  Read the <a href="{{.Version.ReleaseNotesUrl}}">release notes.</a></p>
+			<p>OSX Version 10.8 or higher is required.</p>
+			<p><a href="{{.Version.Url}}" class="btn btn-success">Download {{.Version.Name}}</a></p>
+		</div>
+	</div>
+
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	</body>
+</html>
