@@ -32,7 +32,17 @@ func home(res http.ResponseWriter, req *http.Request) {
 }
 
 func version(rw http.ResponseWriter, req *http.Request) {
-        rw.Header().Set("Content-Type", "application/json")
-        fmt.Fprint(rw, version_response(version_data()))
+
+    query := req.URL.Query()
+    version := version_data()
+
+    rw.Header().Set("Content-Type", "application/json")
+
+    if version.Version == query.Get("version") {
+        rw.WriteHeader(204)
         return
+    }
+
+    fmt.Fprint(rw, version_response(version))
+    return
 }
