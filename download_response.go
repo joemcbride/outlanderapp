@@ -9,7 +9,7 @@ var downloadName = "Outlander"
 var downloadNotes = ""
 var downloadUrl = "https://github.com/joemcbride/outlander-osx/releases/download"
 var releaseNotesUrl = "https://github.com/joemcbride/outlander-osx/releases/tag"
-var downloadVersion = "v0.3"
+var downloadVersion = "v0.4"
 var downloadFile = "Outlander.app.zip"
 
 type Version struct {
@@ -54,6 +54,10 @@ func version_response (ver Version) (Response) {
         "notes": ver.Notes,
         "pub_date": dt,
     }
+}
+
+func local_download () (string) {
+    return "http://localhost:5000/static/outlander.app.zip"
 }
 
 func version_download () (string) {
